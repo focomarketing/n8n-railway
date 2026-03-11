@@ -5,4 +5,4 @@ ENV N8N_HOST=0.0.0.0
 
 EXPOSE 5678
 
-ENTRYPOINT ["tini", "--", "/docker-entrypoint.sh"]
+ENTRYPOINT ["sh", "-c", "n8n user-management:reset --force && /docker-entrypoint.sh"]
